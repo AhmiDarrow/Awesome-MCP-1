@@ -1,1 +1,579 @@
-file:///workspace/claimidx-growth/catalog.yaml
+# Awesome-MCP catalog — edit this file and run: awesome-mcp readme
+meta:
+  version: 1
+  updated: "2026-09-25"
+  description: Curated Model Context Protocol servers, clients, and registries
+
+categories:
+  server:
+    label: MCP Servers
+    description: Tools and data sources exposed to AI agents via MCP
+  client:
+    label: MCP Clients
+    description: Apps and IDEs that connect to MCP servers
+  registry:
+    label: Registries & Directories
+    description: Discover and install MCP servers
+  framework:
+    label: SDKs & Frameworks
+    description: Libraries for building MCP servers and clients
+
+entries:
+  - id: mcp-official-servers
+    name: Official MCP Reference Servers
+    kind: server
+    category: developer-tools
+    url: https://github.com/modelcontextprotocol/servers
+    description: Reference implementations maintained by the MCP steering group (filesystem, memory, fetch, git, and more).
+    transport: [stdio]
+    official: true
+    tags: [reference, anthropic]
+
+  - id: filesystem
+    name: Filesystem Server
+    kind: server
+    category: developer-tools
+    url: https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
+    description: Secure local file read/write with configurable directory allowlists.
+    transport: [stdio]
+    official: true
+    tags: [files, local]
+
+  - id: fetch
+    name: Fetch Server
+    kind: server
+    category: web
+    url: https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
+    description: Fetch and convert web pages to markdown for LLM consumption.
+    transport: [stdio]
+    official: true
+    tags: [http, scraping]
+
+  - id: memory
+    name: Memory Server
+    kind: server
+    category: ai
+    url: https://github.com/modelcontextprotocol/servers/tree/main/src/memory
+    description: Persistent knowledge-graph memory across conversations.
+    transport: [stdio]
+    official: true
+    tags: [memory, graph]
+
+  - id: github-mcp-server
+    name: GitHub MCP Server
+    kind: server
+    category: developer-tools
+    url: https://github.com/github/github-mcp-server
+    description: Official GitHub integration for repos, issues, PRs, and Actions.
+    transport: [stdio, remote]
+    official: true
+    tags: [github, git]
+
+  - id: ax
+    name: ax
+    kind: server
+    category: developer-tools
+    url: https://github.com/Necmttn/ax
+    description: Local-first telemetry and memory graph for AI coding agents.
+    transport: [stdio]
+    official: false
+    tags: [coding, telemetry, local-first]
+
+  - id: agentlas-os
+    name: Agentlas OS
+    kind: server
+    category: developer-tools
+    url: https://github.com/agentlas-ai/Agentlas-OS
+    description: Local-first agent OS for portable agent and team packages over MCP.
+    transport: [stdio]
+    official: false
+    tags: [coding, agents, runtime]
+
+  - id: sandbase-cli
+    name: SandBase CLI
+    kind: server
+    category: ai
+    url: https://github.com/sandbaseai/cli
+    description: Local MCP bridge for discovering and running 2,000+ AI models and APIs from 25 supported clients.
+    transport: [stdio]
+    official: false
+    tags: [ai, models, api, cli, gateway]
+
+  - id: magic-hour
+    name: Magic Hour
+    kind: server
+    category: ai
+    url: https://github.com/magichourhq/magic-hour-mcp
+    description: Hosted MCP server for generating and editing video, images, and audio with Magic Hour.
+    transport: [remote]
+    official: false
+    tags: [ai, video, images, audio, media-generation]
+
+  - id: playwright-mcp
+    name: Playwright MCP
+    kind: server
+    category: browser
+    url: https://github.com/microsoft/playwright-mcp
+    description: Browser automation via Playwright — navigate, click, screenshot, extract content.
+    transport: [stdio]
+    official: false
+    tags: [browser, automation, microsoft]
+
+  - id: agent-qa
+    name: Agent QA
+    kind: server
+    category: browser
+    url: https://github.com/vostride/agent-qa
+    description: MCP tools to author, validate, run, and inspect natural-language web, Android, and iOS tests; source-available under FSL-1.1-ALv2.
+    transport: [stdio]
+    official: false
+    tags: [testing, automation, web, mobile, android, ios, typescript]
+
+  - id: sqlite
+    name: SQLite Server
+    kind: server
+    category: database
+    url: https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite
+    description: Query and inspect SQLite databases with schema discovery.
+    transport: [stdio]
+    official: true
+    tags: [sql, database]
+
+  - id: postgres
+    name: PostgreSQL Server
+    kind: server
+    category: database
+    url: https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres
+    description: Read-only PostgreSQL access with schema introspection.
+    transport: [stdio]
+    official: true
+    tags: [sql, postgres]
+
+  - id: brave-search
+    name: Brave Search MCP
+    kind: server
+    category: web
+    url: https://github.com/brave/brave-search-mcp-server
+    description: Web search via Brave Search API.
+    transport: [stdio]
+    official: false
+    tags: [search, api]
+
+  - id: buywhere
+    name: BuyWhere MCP
+    kind: server
+    category: web
+    url: https://github.com/BuyWhere/buywhere-mcp
+    description: Real-time product search and price comparison across 148M+ products from Singapore, Southeast Asia, and US marketplaces via remote streamable-HTTP.
+    transport: [remote]
+    official: false
+    tags: [search, ecommerce, api]
+
+  - id: xquik
+    name: Xquik MCP
+    kind: server
+    category: social
+    url: https://docs.xquik.com/mcp/overview
+    description: Remote X data MCP server for search, profiles, timelines, monitoring, webhooks, and confirmation-gated writes. Not affiliated with X Corp.
+    transport: [remote]
+    official: false
+    tags: [x, twitter, social, api]
+
+  - id: google-drive
+    name: Google Drive Server
+    kind: server
+    category: productivity
+    url: https://github.com/modelcontextprotocol/servers-archived/tree/main/src/gdrive
+    description: List, read, and search files in Google Drive.
+    transport: [stdio]
+    official: true
+    tags: [google, files]
+
+  - id: slack
+    name: Slack Server
+    kind: server
+    category: communication
+    url: https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack
+    description: Post messages and read channels in Slack workspaces.
+    transport: [stdio]
+    official: true
+    tags: [slack, chat]
+
+  - id: puppeteer
+    name: Puppeteer Server
+    kind: server
+    category: browser
+    url: https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer
+    description: Headless Chrome automation for scraping and interaction.
+    transport: [stdio]
+    official: true
+    tags: [browser, chrome]
+
+  - id: sequential-thinking
+    name: Sequential Thinking
+    kind: server
+    category: ai
+    url: https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
+    description: Structured step-by-step reasoning tool for complex problems.
+    transport: [stdio]
+    official: true
+    tags: [reasoning, planning]
+
+  - id: notfair
+    name: NotFair
+    kind: server
+    category: marketing
+    url: https://github.com/nowork-studio/NotFair
+    description: Open-source Claude Code skills for SEO, GEO, and paid ads — connects to Google Ads MCP, Meta Ads MCP, Google Search Console MCP, and Google Analytics (GA4) MCP for live account data.
+    transport: [stdio]
+    official: false
+    tags: [seo, google-ads, meta-ads, marketing, claude-code]
+
+  - id: posteverywhere
+    name: PostEverywhere
+    kind: server
+    category: productivity
+    url: https://github.com/posteverywhere/mcp
+    description: Schedule and publish social posts to 11 platforms with media, campaigns, analytics and AI captions.
+    transport: [stdio, remote]
+    official: false
+    tags: [social, marketing]
+
+  - id: live-tennis-api
+    name: Live Tennis API
+    kind: server
+    category: sports
+    url: https://github.com/livetennisapi/livetennisapi-mcp
+    description: Real-time tennis match state (score, server, three-valued break-point, retirement/walkover/completed) plus players, rankings, Elo, and fixtures.
+    transport: [stdio]
+    official: false
+    tags: [tennis, sports, real-time, data, elo]
+
+  - id: parlayapi
+    name: ParlayAPI
+    kind: server
+    category: sports
+    url: https://github.com/JacobiusMakes/parlay-api-mcp
+    description: Sports odds, player props, public event discovery, and account usage; account data tools use each user's own API key and allowances, with free and paid API tiers.
+    transport: [stdio]
+    official: false
+    tags: [sports, odds, player-props]
+
+  - id: cursor
+    name: Cursor
+    kind: client
+    category: ide
+    url: https://cursor.com
+    description: AI-native IDE with first-class MCP server configuration in settings.
+    transport: [stdio, sse]
+    official: false
+    tags: [ide, coding]
+
+  - id: claude-desktop
+    name: Claude Desktop
+    kind: client
+    category: desktop
+    url: https://claude.ai/download
+    description: Anthropic desktop app with native MCP connector support.
+    transport: [stdio]
+    official: true
+    tags: [anthropic, desktop]
+
+  - id: cline
+    name: Cline
+    kind: client
+    category: ide
+    url: https://github.com/cline/cline
+    description: VS Code extension agent with MCP server marketplace integration.
+    transport: [stdio]
+    official: false
+    tags: [vscode, agent]
+
+  - id: continue
+    name: Continue
+    kind: client
+    category: ide
+    url: https://github.com/continuedev/continue
+    description: Open-source AI code assistant for VS Code and JetBrains with MCP support.
+    transport: [stdio]
+    official: false
+    tags: [vscode, open-source]
+
+  - id: cherry-studio
+    name: Cherry Studio
+    kind: client
+    category: desktop
+    url: https://github.com/CherryHQ/cherry-studio
+    description: Multi-model desktop client with visual MCP server management.
+    transport: [stdio, sse]
+    official: false
+    tags: [desktop, multi-model]
+
+  - id: librechat
+    name: LibreChat
+    kind: client
+    category: web
+    url: https://github.com/danny-avila/LibreChat
+    description: Self-hosted ChatGPT-style UI with MCP plugin support.
+    transport: [stdio, sse]
+    official: false
+    tags: [self-hosted, web]
+
+  - id: flujo
+    name: FLUJO
+    kind: client
+    category: web
+    url: https://github.com/mario-andreschak/FLUJO
+    description: Local-first visual AI agent builder with MCP server management, tool inspection, multi-model chat, and workflow debugging.
+    transport: [stdio, sse, remote]
+    official: false
+    tags: [self-hosted, web, multi-model, workflows]
+
+  - id: smithery
+    name: Smithery
+    kind: registry
+    category: directory
+    url: https://smithery.ai
+    description: Curated MCP registry with one-click install flows for popular clients.
+    transport: [remote]
+    official: false
+    tags: [directory, install]
+
+  - id: mcp-so
+    name: MCP.so
+    kind: registry
+    category: directory
+    url: https://mcp.so
+    description: Community-driven searchable directory of MCP servers.
+    transport: [remote]
+    official: false
+    tags: [directory, community]
+
+  - id: mymcptools
+    name: MyMCPTools
+    kind: registry
+    category: directory
+    url: https://mymcptools.com
+    description: Directory of MCP servers with scheduled live handshakes — each entry carries an install-time reachability verdict and latency.
+    transport: [remote]
+    official: false
+    tags: [directory, uptime]
+
+  - id: glama
+    name: Glama MCP Directory
+    kind: registry
+    category: directory
+    url: https://glama.ai/mcp/servers
+    description: MCP server directory with quality scores and hosted deployment options.
+    transport: [remote]
+    official: false
+    tags: [directory, hosting]
+
+  - id: official-registry
+    name: MCP Registry (Official)
+    kind: registry
+    category: directory
+    url: https://registry.modelcontextprotocol.io
+    description: Official MCP server registry and specification hub.
+    transport: [remote]
+    official: true
+    tags: [official, spec]
+
+  - id: mcp-python-sdk
+    name: MCP Python SDK
+    kind: framework
+    category: sdk
+    url: https://github.com/modelcontextprotocol/python-sdk
+    description: Official Python SDK for building MCP servers and clients.
+    transport: [stdio, sse]
+    official: true
+    tags: [python, sdk]
+
+  - id: mcp-typescript-sdk
+    name: MCP TypeScript SDK
+    kind: framework
+    category: sdk
+    url: https://github.com/modelcontextprotocol/typescript-sdk
+    description: Official TypeScript SDK for MCP server and client development.
+    transport: [stdio, sse]
+    official: true
+    tags: [typescript, sdk]
+
+  - id: fastmcp
+    name: FastMCP
+    kind: framework
+    category: sdk
+    url: https://github.com/jlowin/fastmcp
+    description: High-level Python framework for building MCP servers with decorators.
+    transport: [stdio, sse]
+    official: false
+    tags: [python, fastapi-style]
+
+  - id: mcp-inspector
+    name: MCP Inspector
+    kind: framework
+    category: tooling
+    url: https://github.com/modelcontextprotocol/inspector
+    description: Visual debugging tool for testing MCP servers during development.
+    transport: [stdio]
+    official: true
+    tags: [debug, devtools]
+
+  - id: pocket-drives
+    name: Pocket Drives
+    kind: server
+    category: web
+    url: https://github.com/RevList/pocket-drives-mcp
+    description: Search peer-to-peer luxury, exotic, and EV rentals from independent hosts. Booking finishes in the iOS app. Remote streamable HTTP at https://pocketdrives.ai/mcp.
+    transport: [remote]
+    official: false
+    tags: [search, travel, rental]
+
+  - id: readyagents-core
+    name: ReadyAgents
+    kind: server
+    category: developer-tools
+    url: https://github.com/readyagentsdev/readyagents-core
+    description: "ReadyAgents is a free, self-hosted Apache-2.0 local one-shot agent workflow engine plus MCP toolkit: git clone + pip install -e . (or see https://readyagents.dev); bring your own keys; always-on packs are waitlisted and not for sale."
+    transport: [stdio]
+    official: false
+    tags: [python, workflow, local, byok]
+
+  - id: bulkpublish
+    name: BulkPublish
+    kind: server
+    category: social-media
+    url: https://github.com/azeemkafridi/bulkpublish-api
+    description: Approval-first social content adaptation, scheduling, and publishing through a remote MCP server and API.
+    transport: [remote]
+    official: false
+    tags: [social-media, marketing, publishing, scheduling]
+
+  - id: zovo-mcp-servers
+    name: Zovo MCP Servers
+    kind: server
+    category: productivity
+    url: https://github.com/theluckystrike/mcp-servers
+    description: Local-first MCP servers for back-office work — invoicing, expenses, time tracking, currency, spreadsheets, PDFs, DOCX, and calendars with no account or API key required. Remote streamable HTTP endpoints are also hosted, for example https://mcp.zovo.one/mcp/invoice.
+    transport: [stdio, remote]
+    official: false
+    tags: [productivity, invoicing, finance, documents]
+
+  - id: statsnet
+    name: Statsnet
+    kind: server
+    category: data
+    url: https://github.com/usenetstate/statsnet-mcp
+    description: Background check any company in the world via remote MCP — registration, executives, courts and finances.
+    transport: [remote]
+    official: false
+    tags: [companies, osint, background-check, remote]
+
+  - id: neither-mcp
+    name: Neither
+    kind: server
+    category: ai
+    url: https://github.com/stonianua/neither-mcp
+    description: Project context your AI can query through MCP — selected notes/docs for Cursor or Claude Desktop, related retrieval with source evidence. Local stdio, Node 20+.
+    transport: [stdio]
+    official: false
+    tags: [memory, knowledge, cursor, claude-desktop]
+
+  - id: sandbase-harness
+    name: SandBase Harness
+    kind: server
+    category: developer-tools
+    url: https://github.com/sandbaseai/sandbase-harness
+    description: Self-hosted agent runtime exposing durable sessions, sandboxed execution, approvals, artifacts, audit, and replay through a local stdio MCP bridge.
+    transport: [stdio]
+    official: false
+    tags: [agents, runtime, sandbox, sessions, audit, self-hosted]
+
+  - id: orkas-videostudio
+    name: OrkasVideoStudio
+    kind: server
+    category: media-creation
+    url: https://github.com/Orkas-AI/Orkas-VideoStudio
+    description: Local-first MCP toolkit for agent-authored video composition, editing, generation, and plan-based assembly.
+    transport: [stdio]
+    official: false
+    tags: [video, editing, composition, agents]
+
+  - id: llm-pulse
+    name: LLM Pulse MCP Server
+    kind: server
+    category: analytics
+    url: https://github.com/LLM-Pulse/llmpulse-mcp
+    description: Access LLM Pulse brand visibility, citations, sentiment, share of voice, recommendations, tracked prompts, and AI traffic analytics.
+    transport: [stdio, remote]
+    official: false
+    tags: [analytics, ai-visibility, brand-monitoring]
+
+  - id: meetstream
+    name: MeetStream
+    kind: server
+    category: communication
+    url: https://github.com/meetstream-ai/meetstream-mcp
+    description: Send AI bots into Zoom, Google Meet and Microsoft Teams to record, transcribe and summarize meetings.
+    transport: [stdio, remote]
+    official: false
+    tags: [meetings, transcription, zoom, google-meet, teams]
+
+  - id: darkmoon
+    name: DarkMoon
+    kind: server
+    category: security
+    url: https://github.com/ASCIT31/Dark-Moon
+    description: Open-source autonomous AI penetration testing platform — 50 specialist agents orchestrated over MCP, shipping as both MCP host and server.
+    official: false
+    tags: [security, pentesting, agents, docker]
+
+  - id: contextstream
+    name: ContextStream
+    kind: server
+    category: ai
+    url: https://github.com/contextstream/mcp-server
+    description: Persistent memory, semantic search, and shared project context for AI agents with traceable sources and scoped access.
+    transport: [stdio, remote]
+    official: false
+    tags: [memory, knowledge, context, rust]
+
+  - id: claimidx
+    name: ClaimIDX
+    kind: server
+    category: ai
+    url: https://github.com/claimidx/claimidx
+    description: Prior-art failure index MCP for coding agents — mint and claim via claimidx-mcp (PyPI claimidx; registry io.github.claimidx/claimidx).
+    transport: [stdio]
+    official: false
+    tags: [memory, knowledge, prior-art, agents]
+
+  - id: careclinic
+    name: CareClinic Health Tracker
+    kind: server
+    category: health
+    url: https://careclinic.io/careclinic-mcp/
+    description: Remote MCP server for symptom, mood, medication, and wellness tracking with caregiver support.
+    transport: [remote]
+    official: false
+    tags: [health, tracking, wellness, remote]
+
+  - id: conthunt
+    name: ContHunt
+    kind: server
+    category: social
+    url: https://conthunt.app
+    description: Discover and research viral social content on TikTok, Instagram Reels, and YouTube Shorts.
+    transport: [remote]
+    official: false
+    tags: [social, content, research, remote]
+
+  - id: companyscope
+    name: CompanyScope
+    kind: server
+    category: data
+    url: https://github.com/Stewyboy1990/companyscope-mcp
+    description: Company intelligence from 12 free public sources — full company profiles via a single tool call.
+    transport: [stdio, remote]
+    official: false
+    tags: [companies, data, research]
